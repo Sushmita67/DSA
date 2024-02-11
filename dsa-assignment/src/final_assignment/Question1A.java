@@ -15,7 +15,7 @@ satisfying the adjacency constraint.
 Please note that the costs are positive integers.
 Example: Input: [[1, 3, 2], [4, 6, 8], [3, 1, 5]] Output: 7
 Explanation: Decorate venue 0 with theme 0, venue 1 with theme 1, and venue 2 with theme 0. Minimum cost: 1 +
-6 + 1 = 7. 
+6 + 1 = 7.
  */
 
 
@@ -64,6 +64,6 @@ public class Question1A {
 
     public static void main(String[] args) {
         int[][] costs = {{1, 3, 2}, {4, 6, 8}, {3, 1, 5}};
-        System.out.println("min_cost_to_decorate all vanues: " + minCostToDecorate(costs));
+        System.out.println("min_cost_to_decorate all vanues: " + minCostToDecorate(costs));   //Output:7
     }
 }
