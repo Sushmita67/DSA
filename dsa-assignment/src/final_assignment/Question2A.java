@@ -26,40 +26,43 @@ number of moves required to equalize the number of dresses is 3.
 package final_assignment;
 
 public class Question2A {
-    public static int minMovesToEqualize(int[] dresses) {
-        int n = dresses.length;
+
+    public static int minMovesToEqualize(int[] machines) {
         int totalDresses = 0;
-        for (int dress : dresses) {
-            totalDresses += dress;
+        int numOfMachines = machines.length;
+
+        // Calculate the total number of dresses in all machines
+        for (int dresses : machines) {
+            totalDresses += dresses;
         }
 
-        // Check if it's possible to equalize
-        if (totalDresses % n != 0) {
+        // If the total number of dresses cannot be equally distributed among machines, return -1
+        if (totalDresses % numOfMachines != 0) {
             return -1;
         }
 
-        int target = totalDresses / n; // Target number of dresses in each machine
-        int moves = 0; // Initialize moves counter
+        // Calculate the target number of dresses in each machine
+        int target = totalDresses / numOfMachines;
 
-        // Iterate through the machines to perform moves
-        for (int i = 0; i < n - 1; i++) {
-            int diff = dresses[i] - target; // Calculate the difference between current machine's dresses and target
-            dresses[i + 1] += diff; // Move the excess dresses to the next machine
-            moves += Math.abs(diff); // Increment moves counter
-            dresses[i] = target; // Set the current machine's dresses to target
+        int moves = 0;
+        int dressesToLeft = 0;
+        int dressesToRight = 0;
+
+        // Iterate through each machine
+        for (int i = 0; i < numOfMachines; i++) {
+            int diff = machines[i] - target;
+
+            // Accumulate the dresses needed to move to the left and right of the current machine
+            dressesToLeft += diff;
+            dressesToRight -= diff;
+            moves = Math.max(moves, Math.max(Math.abs(dressesToLeft), Math.abs(dressesToRight)));
         }
 
-        // All machines should now have target number of dresses
-        if (dresses[n - 1] != target) {
-            return -1; // If the last machine doesn't have the target number of dresses, return -1
-        }
-
-        return moves; // Return the total number of moves
+        return moves;
     }
 
     public static void main(String[] args) {
-        int[] dresses = {1, 0, 5};
-        int moves = minMovesToEqualize(dresses);
-        System.out.println("Minimum number of moves required: " + moves);  //Output:4
+        int[] machines = {1, 0, 5};
+        System.out.println(minMovesToEqualize(machines)); // Output:3
     }
 }

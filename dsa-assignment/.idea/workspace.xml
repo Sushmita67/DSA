@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d01937d5-8f5d-4ce3-afa8-da3191db4852" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/final_assignment/Question5B.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/final_assignment/Question6.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/final_assignment/Question2A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/final_assignment/Question2A.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +52,20 @@
       <recent name="final_assignment" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Question2A">
+    <configuration name="Question2A" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="final_assignment.Question2A" />
+      <module name="dsa-assignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="final_assignment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Question3A" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="final_assignment.Question3A" />
       <module name="dsa-assignment" />
@@ -65,6 +79,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Question2A" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -75,7 +94,8 @@
       <option name="presentableId" value="Default" />
       <updated>1707662801657</updated>
       <workItem from="1707662802759" duration="5396000" />
-      <workItem from="1707709812302" duration="11351000" />
+      <workItem from="1707709812302" duration="12260000" />
+      <workItem from="1707805721898" duration="597000" />
     </task>
     <servers />
   </component>
